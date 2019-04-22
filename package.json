@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/cassiozen/shoestringPlusPlus#readme",
   "devDependencies": {
-    "node-sass": "^4.5.3"
+    "node-sass": "^4.11.0"
   },
   "dependencies": {
     "express": "^4.15.4"

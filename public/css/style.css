@@ -191,7 +191,15 @@ header {
   width: calc(100vw - 8em);
   border-radius: 0 0 1em 1em;
   position: fixed;
-  z-index: 2; }
+  z-index: 2;
+  transform: translateY(-3em); }
+  header:hover {
+    transform: translateY(0);
+    transition: all .5s; }
+
+header.active {
+  transform: translateY(0);
+  transition: all .5s; }
 
 .pull-left {
   float: left; }
@@ -215,10 +223,12 @@ header {
   margin-right: 1.5em; }
   .nav-item a {
     font-size: 1.3em;
-    color: #fff;
+    color: white;
     height: 100%;
     width: 100%;
-    padding: 5px; }
+    padding: 5px;
+    transition: color 1s, background-color 0.5s;
+    /* <----- Transition all CSS properties smoothly during 1 second */ }
   .nav-item :hover {
     color: #202b47;
     border-radius: 5px;
@@ -276,6 +286,9 @@ section {
   color: #252525; }
   #staff .staff-profile {
     height: 348px; }
+    #staff .staff-profile:hover {
+      background-color: orange;
+      transition: all 1s; }
     #staff .staff-profile .headshot {
       height: 5em;
       width: 5em;

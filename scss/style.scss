@@ -25,6 +25,12 @@ header {
   border-radius: 0 0 1em 1em;
   position: fixed;
   z-index: 2;
+  transform: translateY(-3em);
+  transition: all .5s;
+
+header.active{
+  transform: translateY(0);
+  
 }
 
 .pull-left {
@@ -57,10 +63,11 @@ header {
 
   a {
     font-size: 1.3em;
-    color: #fff;
+    color: white;
     height: 100%;
     width: 100%;
     padding: 5px;
+    transition: color 1s, background-color 0.5s; /* <----- Transition all CSS properties smoothly during 1 second */
   }
 
   :hover {
@@ -133,9 +140,15 @@ section {
   width: 100vw;
   height: 850px;
   color: $primary-color;
+  
 
   .staff-profile {
     height: 348px;
+    &:hover{
+      background-color: orange;
+      transition: all 1s; 
+    }
+      
 
     .headshot {
       height: 5em;
