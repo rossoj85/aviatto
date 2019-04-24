@@ -15,6 +15,16 @@ window.addEventListener("scroll", function () {
 
 const imageArray = document.getElementsByClassName("carousel-image");
 
+let currentImageIndex = 0;  
+const carouselImages = document.querySelectorAll(".carousel-image");  
+
+setInterval(() => {  
+    imageArray[currentImageIndex].classList.add("hidden");
+    currentImageIndex++
+    if(currentImageIndex>carouselImages.length-1) currentImageIndex=0
+    imageArray[currentImageIndex].classList.remove("hidden")
+}, 2000);
+
 console.log('IMAGE ARRAY - ',imageArray)
 
 console.log(header)
